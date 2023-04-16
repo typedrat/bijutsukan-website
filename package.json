@@ -1,15 +1,24 @@
 {
-  "name": "bijutsukan-website",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^2.3.0"
-  }
+    "name": "bijutsukan-website",
+    "version": "0.0.1",
+    "type": "module",
+    "scripts": {
+        "astro": "astro",
+        "build": "astro build",
+        "dev": "astro dev",
+        "preview": "astro preview",
+        "start": "astro dev"
+    },
+    "dependencies": {
+        "astro": "^2.3.0"
+    },
+    "devDependencies": {
+        "@unocss/reset": "^0.51.4",
+        "@vercel/style-guide": "^4.0.2",
+        "eslint": "^8.38.0",
+        "prettier": "^2.8.7",
+        "typescript": "^4.9.5",
+        "unocss": "^0.51.4",
+        "unocss-preset-radix": "^2.2.0"
+    }
 }
