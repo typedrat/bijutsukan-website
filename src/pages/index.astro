@@ -14,12 +14,12 @@
         <div class="overflow-x-hidden">
             <div class="font-sans sm:container sm:mx-auto">
                 <section
-                    class="bg-cover min-h-[calc(100vh-2.5rem)] sm:-mx-100vw sm:px-100vw text-black"
+                    class="bg-cover mobile-friendly-100vh sm:-mx-100vw sm:px-100vw text-black"
                     style="background-image: url('/background.jpg')"
                 >
                 </section>
                 <header
-                    class="h-2.5rem sm:-mx-100vw sm:px-100vw bg-crimson9 text-4xl text-white"
+                    class="h-60px lh-60px sm:-mx-100vw sm:px-100vw bg-crimson9 text-4xl text-white"
                 >
                     <nav class="relative w-100%">Bijutsukan</nav>
                 </header>
@@ -27,3 +27,10 @@
         </div>
     </body>
 </html>
+
+<style scoped="global">
+    .mobile-friendly-100vh {
+        min-height: calc(100vh - 60px);
+        min-height: calc(100dvh - 60px);
+    }
+</style>
