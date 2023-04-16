@@ -1,0 +1,101 @@
+---
+import { SEO } from 'astro-seo';
+---
+
+<html lang="en">
+    <head>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link rel="icon" type="image/svg+xml" href="/bijutsukan.svg" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e83e82" />
+        <meta name="apple-mobile-web-app-title" content="Bijutsukan" />
+        <meta name="application-name" content="Bijutsukan" />
+        <meta name="msapplication-TileColor" content="#e83e82" />
+        <meta name="theme-color" content="#e83e82" />
+        <meta name="viewport" content="width=device-width" />
+
+        <!-- SEO starts here -->
+        <SEO
+            charset="UTF-8"
+            description="A friendly, easy to use iOS app for collecting and organizing anime fanart and anything else on Boorus."
+            openGraph={{
+                basic: {
+                    title: 'Bijutsukan',
+                    type: 'website',
+                    image: 'https://bijutsukan.moe/bijutsukan.svg',
+                },
+                optional: {
+                    description:
+                        'A friendly, easy to use iOS app for collecting and organizing anime fanart and anything else on Boorus.',
+                },
+                image: {
+                    type: 'image/svg+xml',
+                    alt: 'Bijutsukan logo',
+                },
+            }}
+            twitter={{
+                card: 'summary',
+                site: '@bijutsukanapp',
+                title: 'Bijutsukan',
+                description:
+                    'A friendly, easy to use iOS app for collecting and organizing anime fanart and anything else on Boorus.',
+            }}
+        />
+        <!-- SEO stops here -->
+        <meta name="generator" content={Astro.generator} />
+        <title>Bijutsukan</title>
+    </head>
+    <body class="bg-mauve1 text-crimson12">
+        <div class="overflow-x-hidden">
+            <div class="font-sans sm:container sm:mx-auto">
+                <slot name="above-header" />
+                <header
+                    class="h-60px lh-60px sm:-mx-100vw sm:px-100vw bg-crimson9 text-4xl text-white"
+                >
+                    <nav class="relative w-100%">
+                        <ul class="list-none">
+                            <li>
+                                <a href="/">Bijutsukan</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <slot />
+                <footer
+                    class="p-y-1rem sm:-mx-100vw sm:px-100vw bg-crimson9 text-white flex flex-col items-center"
+                >
+                    <div class="m-b-0.5rem">
+                        &copy; 2023 <a
+                            class="underline"
+                            href="https://typedr.at">Alexis Williams</a
+                        >.
+                    </div>
+
+                    <ul class="list-none text-sm flex flex-row space-x-sm">
+                        <li>
+                            <a class="underline" href="/privacy-policy"
+                                >Privacy Policy</a
+                            >
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

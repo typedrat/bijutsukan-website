@@ -1,5 +1,10 @@
 // uno.config.ts
-import { defineConfig, presetUno, presetWebFonts } from 'unocss';
+import {
+    defineConfig,
+    presetTypography,
+    presetUno,
+    presetWebFonts,
+} from 'unocss';
 import { presetRadix } from 'unocss-preset-radix';
 
 export default defineConfig({
@@ -14,7 +19,8 @@ export default defineConfig({
             },
         }),
         presetRadix({
-            palette: ['crimson', 'gray'],
+            palette: ['crimson', 'gray', 'mauve'],
         }),
+        presetTypography(),
     ],
 });
